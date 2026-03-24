@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Website with Links</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="basic.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Quick Links Hub</h1>
+            <p class="subtitle">A simple website with quick access to popular websites on the internet. Author BY- Shivanshu Thakur </p>
+        </header>
+        
+        <main>
+            <p class="intro">Welcome to our basic HTML website! Below you'll find links to some of the most popular websites on the internet. Click any link to visit the respective site in a new tab.</p>
+            
+            <section class="links-section">
+                <h2>Popular Websites</h2>
+                <div class="links-grid">
+                    <!-- Google Link Card -->
+                    <div class="link-card">
+                        <i class="link-icon google-icon fab fa-google"></i>
+                        <h3 class="link-title">Google</h3>
+                        <p class="link-description">The world's most popular search engine. Find information, images, videos and more.</p>
+                        <a href="https://www.google.com" target="_blank" class="link-button">Visit Google</a>
+                    </div>
+                    
+                    <!-- Facebook Link Card -->
+                    <div class="link-card">
+                        <i class="link-icon facebook-icon fab fa-facebook"></i>
+                        <h3 class="link-title">Facebook</h3>
+                        <p class="link-description">Connect with friends, family and communities. Share photos, videos and updates.</p>
+                        <a href="https://www.facebook.com" target="_blank" class="link-button">Visit Facebook</a>
+                    </div>
+                    
+                    <!-- YouTube Link Card -->
+                    <div class="link-card">
+                        <i class="link-icon youtube-icon fab fa-youtube"></i>
+                        <h3 class="link-title">YouTube</h3>
+                        <p class="link-description">Watch and share videos on the world's largest video sharing platform.</p>
+                        <a href="https://www.youtube.com" target="_blank" class="link-button">Visit YouTube</a>
+                    </div>
+                    
+                    <!-- Wikipedia Link Card -->
+                    <div class="link-card">
+                        <i class="link-icon wikipedia-icon fab fa-wikipedia-w"></i>
+                        <h3 class="link-title">Wikipedia</h3>
+                        <p class="link-description">The free encyclopedia with millions of articles in hundreds of languages.</p>
+                        <a href="https://www.wikipedia.org" target="_blank" class="link-button">Visit Wikipedia</a>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="links-section">
+                <h2>Additional Resources</h2>
+                <div class="links-grid">
+                    <!-- GitHub Link Card -->
+                    <div class="link-card">
+                        <i class="link-icon fab fa-github"></i>
+                        <h3 class="link-title">GitHub</h3>
+                        <p class="link-description">Platform for version control and collaboration. Host and review code.</p>
+                        <a href="https://github.com/ShivanshuDS" target="_blank" class="link-button">Visit GitHub</a>
+                    </div>
+                    
+                    <!-- Twitter Link Card -->
+                    <div class="link-card">
+                        <i class="link-icon fab fa-twitter" style="color: #1da1f2;"></i>
+                        <h3 class="link-title">Twitter</h3>
+                        <p class="link-description">Social media platform for real-time news, updates and conversations.</p>
+                        <a href="https://twitter.com" target="_blank" class="link-button">Visit Twitter</a>
+                    </div>
+                    
+                    <!-- LinkedIn Link Card -->
+                    <div class="link-card">
+                        <i class="link-icon fab fa-linkedin" style="color: #0077b5;"></i>
+                        <h3 class="link-title">LinkedIn</h3>
+                        <p class="link-description">Professional networking platform for jobs, business and career development.</p>
+                        <a href="https://www.linkedin.com/in/shivanshu2007/" target="_blank" class="link-button">Visit LinkedIn</a>
+                    </div>
+                    
+                    <!-- Stack Overflow Link Card -->
+                    <div class="link-card">
+                        <i class="link-icon fab fa-stack-overflow" style="color: #f48024;"></i>
+                        <h3 class="link-title">Stack Overflow</h3>
+                        <p class="link-description">Community for developers to ask and answer programming questions.</p>
+                        <a href="https://stackoverflow.com" target="_blank" class="link-button">Visit Stack Overflow</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>Basic HTML Website with Links &copy; 2023 | All external links open in new tab</p>
+            <p>This is a demonstration website for HTML and CSS practice.</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Simple script to add a click confirmation message
+        document.querySelectorAll('.link-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const siteName = this.parentElement.querySelector('.link-title').textContent;
+                console.log(`Navigating to ${siteName}...`);
+            });
+        });
+        
+        // Add current year to footer
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearSpan = document.createElement('span');
+            yearSpan.textContent = new Date().getFullYear();
+            document.querySelector('footer p').innerHTML = document.querySelector('footer p').innerHTML.replace('2023', yearSpan.textContent);
+        });
+    </script>
+</body>
+</html>
